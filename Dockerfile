@@ -5,7 +5,7 @@ WORKDIR /var/www/html
 
 # Update packages and install Apache and PHP
 RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y apache2 php libapache2-mod-php \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y apache2 php php-mysqli libapache2-mod-php \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
